@@ -42,7 +42,6 @@ export class TecnicoCreateComponent implements OnInit {
       this.toastr.info('Técnico cadastrado com sucesso','Cadastro');
       this.router.navigate(['tecnicos']);
     }, ex => {
-      console.log(ex);
       if(ex.error.erros){
         ex.error.errors.forEach(element => {
           this.toastr.error(element.message);
